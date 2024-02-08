@@ -714,6 +714,7 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    margin: 5px;
 }
 
 button:hover {
@@ -735,4 +736,21 @@ img {
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-content a{
+    margin: 15px;
+    text-decoration: none;
+    font-family:'Poppins', sans-serif;
+    color: black;
+}
+
+.skills-content a:hover{
+    color: white;
 }

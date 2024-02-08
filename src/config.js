@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-    'mongodb+srv://admin:admin@cluster0.2re14nq.mongodb.net/practice'
+    'mongodb+srv://admin:admin@cluster0.2re14nq.mongodb.net/assik3'
     ).then(() => {
         console.log('db connection')
     }).catch((err) =>{
@@ -17,6 +17,8 @@ const LoginSchema = new mongoose.Schema({
         type: 'string',
         required: true,
     }
+},{
+    timestamps:true,
 })
 
 const collection = new mongoose.model("users",LoginSchema)
