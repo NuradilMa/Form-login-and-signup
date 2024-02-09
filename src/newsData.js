@@ -15,6 +15,6 @@ const newsHistorySchema = new mongoose.Schema({
     }
 }, { timestamps: true });
 
-const news = mongoose.model('NewsHistory', newsHistorySchema);
+const News = mongoose.model('NewsHistory', newsHistorySchema);
 
-module.exports = news;
+export default News;

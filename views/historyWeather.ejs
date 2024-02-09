@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather History</title>
+    <title>News History</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -38,15 +38,19 @@
     </style>
 </head>
 <body>
-    <h2>Weather History</h2>
-    <% if (historyWeather.length > 0) { %>
+    <h2>News History</h2>
+    <% if (newsHistory.length > 0) { %>
         <ul>
-            <% historyWeather.forEach(entry => { %>
-                <li><%= entry.city %> is <%= entry.temperature %>°C <%= entry.description %> at <%= new Date(entry.createdAt).toLocaleString() %></li>
+            <% newsHistory.forEach(entry => { %>
+                <li>
+                    <p>Title: <%= entry.title %></p>
+                    <p>Description: <%= entry.description %></p>
+                    <p>Publish Date: <%= new Date(entry.publishedAt).toLocaleDateString() %></p> <!-- Display publish date -->
+                </li>
             <% }) %>
         </ul>
     <% } else { %>
-        <p>No weather history available.</p>
+        <p>No news history available.</p>
     <% } %>
 </body>
 </html>
